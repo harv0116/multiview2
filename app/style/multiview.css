@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+
+/***********************************
+					Navigation
+***********************************/
+/* -- Navigation Container -- */
+.navbar{
+  padding: 0;
+}
+
+/* -- Navigation Items -- */
+.navbar li{
+  float: left;
+  width: 33%;
+  list-style: none;
+}
+
+/* -- Navigation Anchor -- */
+.navbar a{
+	display: block;	
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	background-color: #F5A96A;
+}
+
+/* -- Navigation Pseudo States -- */
+.navbar a:visited,
+.navbar a:active,
+.navbar a:focus{
+	color: #fff;
+	background-color: #F5A96A;
+}
+
+.navbar a:hover{
+	background-color: #F7DEA6;
+
+}
+
+
+/* -- Navigation Breakpoints -- */
+@media screen and (max-width: 400px){
+  
+  /* -- Navigation Items -- */
+  .navbar li{
+    width: 33%; 
+  }
+  
+}
+
+@media screen and (max-width: 650px){
+
+  /* -- Navigation Items -- */
+  .navbar li{
+    width: 33%; 
+  }
+  
+}
+
+
+@media screen and (max-width: 1080px){
+  
+  /* -- Navigation Container -- */
+  .navbar{
+    width:260px;
+  }
+  
+  /* -- Navigation Items -- */
+  .navbar li{
+    float: none;
+    width: 33%; 
+  }
+  
+  /* -- Navigation Anchors -- */
+  .navbar a{
+   text-align: left; 
+  }
+  
+}

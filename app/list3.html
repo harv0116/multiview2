@@ -1,0 +1,9 @@
+<script type="text/ng-template" id="list3.html">
+    <input type="text" ng-model="thirddata.thirdtask" placeholder="Add a task here...">
+    <button type="button" ng-click="addTask()">ADD</button>
+    <ul>
+        <li ng-repeat="thirdtask in thirdtasks track by $index" ng-show="thirdtask != undefined"> {{thirdtask}} 
+        	<button ng-click="removeTask($index)">Remove</button>
+        </li>
+    </ul>
+	</script>

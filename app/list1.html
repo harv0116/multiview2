@@ -1,0 +1,13 @@
+
+    
+	<script type="text/ng-template" id="list1.html">
+    <input type="text" ng-model="data.task" placeholder="Add a task here...">
+    <button type="button" ng-click="addTask()">ADD</button>
+    <ul>
+        <li ng-repeat="task in tasks track by $index" ng-show="task != undefined"> {{task}} 
+        	<button ng-click="removeTask($index)">Remove</button>
+        </li>
+    </ul>
+	</script>
+
+    

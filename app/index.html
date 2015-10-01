@@ -1,0 +1,52 @@
+
+<html ng-app="myApp">
+<head>
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<meta charset="UTF-8">
+<title>Paul's Tab Example</title>
+
+</head>
+
+<body >
+  <div class="jumbotron">
+     <div class="container">    
+        <h1>To do list</h1>
+        <div>
+          <div ng-init="tab=1" ng-controller="tabController">
+<!--              <div ng-controller="tabController">
+              <tabset justified="true">
+                <tab heading="Justified"><a href="#list1">Tab1</a></tab>
+                <tab heading="SJ"><a href="#list2">Tab2</a></tab>
+                <tab heading="Long Justified"><a href="#list3">Tab3</a></tab>
+              </tabset>
+ -->           
+            <ul class="nav nav-tabs">
+              <li ng-class="{active: tab == 1}" ><a ng-click="tab = 1" href="#list1">Tab1</a></li>
+              <li ng-class="{active: tab == 2}" ><a ng-click="tab = 2" href="#list2">Tab2</a></li>
+              <li ng-class="{active: tab == 3}" ><a ng-click="tab = 3" href="#list3">Tab3</a></li>
+            </ul>
+            <div class="tab-content">
+         
+              <div class="tab-pane" ng-class="{active: tab == 1}" ng-show="tab == 1"></div>
+              <div class="tab-pane" ng-class="{active: tab == 2}" ng-show="tab == 2"></div>
+              <div class="tab-pane" ng-class="{active: tab == 3}" ng-show="tab == 3"></div>
+        	</div>
+          </div>
+        </div>
+        
+        <div ui-view></div>
+    </div>
+ </div>
+    
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    <script src="scripts/app.js"></script>
+	<script src="scripts/main_controller.js"></script>
+    <script src="scripts/second_controller.js"></script>
+    <script src="scripts/third_controller.js"></script>
+    <script src="scripts/tab_controller.js"></script>
+	
+</body>
+</html>
